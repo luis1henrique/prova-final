@@ -1,0 +1,28 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;  /* centraliza horizontalmente */
+    align-items: center;      /* centraliza verticalmente */
+    margin-top: 40px;
+   
+
+}
+header {
+    display: flex;
+    align-items: center;
+    gap: 500px;           /* espaço entre a imagem e o título */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+header img {
+    height: 50px; /* ajuste o tamanho conforme necessário */
+
+}
+header h1 {
+    margin: 0; /* remove espaçamento padrão */
+    font-size: 24px;
+}
+
+
