@@ -1,28 +1,93 @@
-body{
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;  /* centraliza horizontalmente */
-    align-items: center;      /* centraliza verticalmente */
-    margin-top: 40px;
-   
-
+    box-sizing: border-box;
 }
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; /* empilha header e main verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+}
+
+/* Cabeçalho */
 header {
     display: flex;
     align-items: center;
-    gap: 500px;           /* espaço entre a imagem e o título */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1000px;
+    padding: 20px;
+    border-bottom: 2px solid #000;
+    background-color: #fff;
 }
 
 header img {
-    height: 50px; /* ajuste o tamanho conforme necessário */
-
+    height: 50px;
 }
+
 header h1 {
-    margin: 0; /* remove espaçamento padrão */
-    font-size: 24px;
+    font-size: 28px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/* Área principal */
+main {
+    display: flex;
+    flex-direction: row;     /* cards na horizontal */
+    flex-wrap: wrap;         /* permite que quebrem para próxima linha se necessário */
+    justify-content: center; /* centraliza os cards horizontalmente */
+    gap: 30px;               /* espaço entre os cards */
+    margin: 40px 0;
+    width: 100%;
+}
+/* Card */
+.card {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    width: 350px;           /* largura fixa para caber lado a lado */
+    text-align: left;
+}
 
+.card h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #181616;
+    display: flex;
+}
+
+.card p {
+    font-size: 14px;
+    color: #1f1e1e;
+    margin-bottom: 10px;
+}
+
+.card h4 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #131111;
+}
+.card button {
+    display: block;          /* empilha os botões */
+    width: auto;             /* largura automática */
+    min-width: 150px;        /* largura mínima para deixar bonito */
+    margin: 10px auto 0;     /* margem superior e centraliza horizontalmente */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+}
+.card button:last-child {
+    margin-bottom: 0;
+}
+
+.card button:hover {
+    background-color: #ff0000;
+}
